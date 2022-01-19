@@ -21,16 +21,10 @@ data = pd.read_csv(DATA_PATH.joinpath("dataForScatter.csv"))
 data["total_grads_of_cohort"] = data["total_grads_of_cohort"].apply(float)
 #app = dash.Dash(__name__)
 #can be hopefully deleted after changing the data
-list_loc = data["location"].to_list()
-list_loc = [x.split(",") for x in list_loc]
-list_lat=[x[0] for x in list_loc]
-list_lat=[x.split("(") for x in list_lat]
-list_lat=[float(x[1]) for x in list_lat]
-data["latitude"]=list_lat
-list_long=[x[1] for x in list_loc]
-list_long=[x.split(")") for x in list_long]
-list_long=[float(x[0]) for x in list_long]
-data["longitude"]=list_long
+
+data["latitude"]=data["latitude"].apply(float)
+
+data["longitude"]=data["longitude"].apply(float)
 
 layout = html.Div([
     html.H1("NY City school explorer"),
