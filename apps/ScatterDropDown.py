@@ -18,7 +18,8 @@ data = pd.read_csv(DATA_PATH.joinpath("dataForScatter.csv"))
 #data = pd.read_csv("datasets/dataforscatter.csv")
 
 #datasets = datasets.loc[:,["school_name", "borough", "trees", "crashes", "pc", "shootings", "arrests", "programs", "bins", "corhort_year", "total_grads_of_cohort"]]
-data["total_grads_of_cohort"] = data["total_grads_of_cohort"].apply(float)
+data["avg_perc Grads"] = data["avg_perc Grads"].apply(float)
+data["avg_perc Grads"] = data["avg_perc Grads"].round()
 #app = dash.Dash(__name__)
 #can be hopefully deleted after changing the data
 
@@ -81,8 +82,9 @@ def build_graph(borough_choosen,filter):
         df=data[data["borough"].isin(listBor)]
     print(listBor)
     print(filter)
-    fig = px.scatter(df, x=filter, y="total_grads_of_cohort",
-                     hover_data=["school_name", "borough"])
+    fig = px.scatter(df, x=filter, y="avg_perc Grads",
+                     hover_data=["school_name", "borough"],
+                     labels={"avg_perc Grads":"Average Graduation Rate in Percentage"})
     return fig
 
 @app.callback(
@@ -92,7 +94,8 @@ def get_map(borough_chs):
     #df =data
     #df["total_grads_of_cohort"]=df["total_grads_of_cohort"].apply(str)
     fig = px.scatter_mapbox(data, lat="latitude", lon="longitude", hover_name="school_name",
-                            hover_data=["total_grads_of_cohort" ],color_discrete_sequence=["fuchsia"], zoom=10, height=700)
+                            hover_data=["avg_perc Grads"],color_discrete_sequence=["fuchsia"], zoom=10, height=700
+                            )
     fig.update_layout(mapbox_style="open-street-map")
     fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
     return fig
