@@ -4,6 +4,7 @@
     <list default="true" id="581473b7-0589-43dd-b5e2-73592c1a693c" name="Default Changelist" comment="connected drop down &amp; sliders for ml part">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/mlPart.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/mlPart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/dataForScatter.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/dataForScatter.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
