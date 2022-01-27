@@ -9,7 +9,8 @@ from app import app
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
 
-data = pd.read_csv(DATA_PATH.joinpath("dataForScatter.csv"))
+data = pd.read_csv(DATA_PATH.joinpath("dataForScatter.csv"), sep=";")
+
 
 schools=data["school_name"].unique()
 label_school=[]

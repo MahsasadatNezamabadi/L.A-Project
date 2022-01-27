@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="581473b7-0589-43dd-b5e2-73592c1a693c" name="Default Changelist" comment="connected drop down &amp; sliders for ml part">
-      <change afterPath="$PROJECT_DIR$/dataPreprocessing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasets/2016_DOE_High_School_Directory-2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataPreprocessing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/DataPreprocessing.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/mlPart.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/mlPart.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +19,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="23eevETESaf3wsFeqVZCYQzKgey" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,7 +38,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.data">
+  <component name="RunManager" selected="Python.index">
     <configuration name="data" type="PythonConfigurationType" factoryName="Python">
       <module name="L.A-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
