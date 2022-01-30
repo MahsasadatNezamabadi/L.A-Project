@@ -90,15 +90,25 @@ def build_graph(borough_choosen,filter):
 @app.callback(
     Output(component_id="map",component_property="figure"),
     Input(component_id="Borough",component_property="value"))
-def get_map(borough_chs):
-    #df =data
-    #df["total_grads_of_cohort"]=df["total_grads_of_cohort"].apply(str)
-    fig = px.scatter_mapbox(data, lat="latitude", lon="longitude", hover_name="school_name",
-                            hover_data=["avg_perc Grads"],color_discrete_sequence=["fuchsia"], zoom=10, height=700
-                            )
+
+def get_map(borough_chosen):
+    listBor = []
+    listBor.extend(borough_chosen)
+    if "all" in listBor:
+        df = data
+        zoom = 9.5
+    else:
+        df = data[data["borough"].isin(listBor)]
+        zoom = 10
+
+
+    fig = px.scatter_mapbox(df, lat="latitude", lon="longitude",
+                            hover_name="school_name", hover_data=["avg_perc Grads"],
+                            color_discrete_sequence=["fuchsia"], zoom=zoom, height=600, width=800)
     fig.update_layout(mapbox_style="open-street-map")
     fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
-    return fig
+    return fig  # component_property of output
+
 
 
 

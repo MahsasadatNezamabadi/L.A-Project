@@ -5,10 +5,11 @@ import plotly.express as px
 import pandas as pd
 import pathlib
 from app import app
+from apps.getPrediction import get_pred
 
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
-
+#imgPath=PATH.joinpath("../images/four.jpg").resolve()
 data = pd.read_csv(DATA_PATH.joinpath("dataForScatter.csv"))
 
 
@@ -88,6 +89,7 @@ layout=html.Div([
         value=10,
     )]),
     html.Div(id='slider-output'),
+    html.Img(id="Pred"),
     html.Div(id="school_value")
 ])
 #@app.callback(Output(component_id="school_value"), Input(component_id="school"))
@@ -127,4 +129,32 @@ def get_sliderOutput(trees,crashes,pc,shootings,arrests,programs,bins):
     res_str = res_str + 'You have selected "{}" programs '.format(programs)
     res_str = res_str + 'You have selected "{}" bins'.format(bins)
     return res_str
+
+@app.callback(Output(component_id="Pred",component_property="src"),[
+    Input(component_id="trees",component_property="value"),Input(component_id="crashes",component_property="value"),
+    Input(component_id="pc",component_property="value"), Input(component_id="shootings",component_property="value"),
+    Input(component_id="arrests",component_property="value"), Input(component_id="programs",component_property="value"),
+    Input(component_id="bins",component_property="value")
+    ])
+
+def get_Prediction(trees,crashes,pc,shootings,arrests,programs,bins):
+    dict_feat={"trees":[trees],"crashes":[crashes],"pc":[pc],"shootings":[shootings],
+               "arrests":[arrests],"programs":[programs],"bins":[bins]}
+
+    feat=pd.DataFrame(data=dict_feat)
+    pred=get_pred(feat)
+    if pred[0] == 0:
+        filename="zero.jpeg"
+    elif pred[0]==1:
+        filename="one.jpeg"
+    elif pred[0]==2:
+        filename="two.jpeg"
+    elif pred[0]==3:
+        filename="three.jpeg"
+    elif pred[0]==4:
+        filename="four.jpeg"
+    fname = "/assets/"+filename
+
+    print(pred)
+    return fname
 

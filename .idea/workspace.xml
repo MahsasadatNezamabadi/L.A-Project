@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="581473b7-0589-43dd-b5e2-73592c1a693c" name="Default Changelist" comment="created knn model">
-      <change afterPath="$PROJECT_DIR$/apps/getPrediction.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_model.sav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasets/meanStd.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/ScatterDropDown.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ScatterDropDown.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getPrediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getPrediction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/mlPart.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/mlPart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final_model.sav" beforeDir="false" afterPath="$PROJECT_DIR$/final_model.sav" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +49,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.getPrediction">
+  <component name="RunManager" selected="Python.index">
     <configuration name="getPrediction" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
