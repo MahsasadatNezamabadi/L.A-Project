@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="581473b7-0589-43dd-b5e2-73592c1a693c" name="Default Changelist" comment="created knn model">
-      <change afterPath="$PROJECT_DIR$/datasets/meanStd.csv" afterDir="false" />
+    <list default="true" id="581473b7-0589-43dd-b5e2-73592c1a693c" name="Default Changelist" comment="added ml model to the ml site &amp; included the pictures, also connected drop down on first page to map">
+      <change afterPath="$PROJECT_DIR$/assets/FirstPageLayout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/ny.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/ScatterDropDown.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ScatterDropDown.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getPrediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getPrediction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/mlPart.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/mlPart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_model.sav" beforeDir="false" afterPath="$PROJECT_DIR$/final_model.sav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/four.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/four.JPEG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/one.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/one.JPEG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/three.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/three.JPEG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/two.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/two.JPEG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/zero.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/zero.JPEG" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,10 +42,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -183,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643279962116</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added ml model to the ml site &amp; included the pictures, also connected drop down on first page to map">
+      <created>1643562556583</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1643562556583</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,6 +227,7 @@
     <MESSAGE value="aggregate graduation rate for each school" />
     <MESSAGE value="connected drop down &amp; sliders for ml part" />
     <MESSAGE value="small changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="small changes" />
+    <MESSAGE value="added ml model to the ml site &amp; included the pictures, also connected drop down on first page to map" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ml model to the ml site &amp; included the pictures, also connected drop down on first page to map" />
   </component>
 </project>

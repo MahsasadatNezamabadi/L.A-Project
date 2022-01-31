@@ -39,6 +39,11 @@ layout=html.Div([
         max=data["trees"].max(),
         step=1,
         value=10,
+        marks={
+            0:{"label":"0"},
+            int(data["trees"].max()//2):{"label":str((data["trees"].max()//2))},
+            int(data["trees"].max()):{"label":str(data["trees"].max())}},
+        tooltip={"placement": "bottom", "always_visible": True}
     ),
     html.Span("Number of Vehicle crashes"),
     dcc.Slider(
@@ -47,6 +52,11 @@ layout=html.Div([
         max=data["crashes"].max(),
         step=1,
         value=10,
+        marks={
+            0:{"label":"0"},
+            int(data["crashes"].max()//2):{"label":str((data["crashes"].max()//2))},
+            int(data["crashes"].max()):{"label":str(data["crashes"].max())}},
+        tooltip={"placement": "bottom", "always_visible": True}
     ),
     html.Span("Number of Public computers"),
     dcc.Slider(
@@ -55,6 +65,11 @@ layout=html.Div([
         max=data["pc"].max(),
         step=1,
         value=10,
+        marks={
+            0:{"label":"0"},
+            int(data["pc"].max()//2):{"label":str((data["pc"].max()//2))},
+            int(data["pc"].max()):{"label":str(data["pc"].max())}},
+        tooltip={"placement": "bottom", "always_visible": True}
     ),
     html.Span("Number of Shootings"),
     dcc.Slider(
@@ -63,6 +78,11 @@ layout=html.Div([
         max=data["shootings"].max(),
         step=1,
         value=10,
+        marks={
+            0:{"label":"0"},
+            int(data["shootings"].max()//2):{"label":str((data["shootings"].max()//2))},
+            int(data["shootings"].max()):{"label":str(data["shootings"].max())}},
+        tooltip={"placement": "bottom", "always_visible": True}
     ),
     html.Span("Number of arrests"),
     dcc.Slider(
@@ -71,6 +91,11 @@ layout=html.Div([
         max=data["arrests"].max(),
         step=1,
         value=10,
+        marks={
+            0:{"label":"0"},
+            int(data["arrests"].max()//2):{"label":str((data["arrests"].max()//2))},
+            int(data["arrests"].max()):{"label":str(data["arrests"].max())}},
+        tooltip={"placement": "bottom", "always_visible": True}
     ),
     html.Span("Number of After School Programs"),
     dcc.Slider(
@@ -79,6 +104,11 @@ layout=html.Div([
         max=data["programs"].max(),
         step=1,
         value=10,
+        marks={
+            0:{"label":"0"},
+            int(data["programs"].max()//2):{"label":str((data["programs"].max()//2))},
+            int(data["programs"].max()):{"label":str(data["programs"].max())}},
+        tooltip={"placement": "bottom", "always_visible": True}
     ),
     html.Span("Number of Public Recycling Bins"),
     dcc.Slider(
@@ -87,10 +117,17 @@ layout=html.Div([
         max=data["bins"].max(),
         step=1,
         value=10,
+        marks={
+            0:{"label":"0"},
+            int(data["bins"].max()//2):{"label":str((data["bins"].max()//2))},
+            int(data["bins"].max()):{"label":str(data["bins"].max())}},
+        tooltip={"placement": "bottom", "always_visible": True}
     )]),
-    html.Div(id='slider-output'),
-    html.Img(id="Pred"),
-    html.Div(id="school_value")
+    html.Div([
+        html.Img(id="Pred", style={"width":"25%","display":"inline-block"}),
+        html.Div(id='slider-output', style={"display":"inline-block","width":"50%"}),
+
+    ])
 ])
 #@app.callback(Output(component_id="school_value"), Input(component_id="school"))
 @app.callback([Output(component_id="trees",component_property="value"),
@@ -120,14 +157,15 @@ def get_sliderValues(school):
     ])
 
 def get_sliderOutput(trees,crashes,pc,shootings,arrests,programs,bins):
-    res_str=""
-    res_str = res_str+'You have selected "{}" trees'.format(trees)
-    res_str = res_str + 'You have selected "{}" crashes '.format(crashes)
-    res_str = res_str + 'You have selected "{}" pc '.format(pc)
-    res_str = res_str + 'You have selected "{}" shootings '.format(shootings)
-    res_str = res_str + 'You have selected "{}" arrests '.format(arrests)
-    res_str = res_str + 'You have selected "{}" programs '.format(programs)
-    res_str = res_str + 'You have selected "{}" bins'.format(bins)
+    dict_feat = {"trees": [trees], "crashes": [crashes], "pc": [pc], "shootings": [shootings],
+                 "arrests": [arrests], "programs": [programs], "bins": [bins]}
+
+    feat = pd.DataFrame(data=dict_feat)
+    pred = get_pred(feat)[0]
+    res_str='Based on your selection of {trees} trees, {crashes} crashes, {pc} pc, {shootings} shootings, ' \
+            '{arrests} arrests,  {programs} programs, {bins} bins the predicted graduation rate is {pred}, ' \
+            'where 0 is the worst rating possible & 4 is the best possible rating'.format(trees=trees,crashes=crashes,pc=pc, shootings=shootings,
+                                                        arrests=arrests,programs=programs,bins=bins, pred=pred)
     return res_str
 
 @app.callback(Output(component_id="Pred",component_property="src"),[
@@ -155,6 +193,5 @@ def get_Prediction(trees,crashes,pc,shootings,arrests,programs,bins):
         filename="four.jpeg"
     fname = "/assets/"+filename
 
-    print(pred)
     return fname
 

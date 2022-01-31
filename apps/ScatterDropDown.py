@@ -15,13 +15,10 @@ PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
 
 data = pd.read_csv(DATA_PATH.joinpath("dataForScatter.csv"))
-#data = pd.read_csv("datasets/dataforscatter.csv")
 
-#datasets = datasets.loc[:,["school_name", "borough", "trees", "crashes", "pc", "shootings", "arrests", "programs", "bins", "corhort_year", "total_grads_of_cohort"]]
+
 data["avg_perc Grads"] = data["avg_perc Grads"].apply(float)
 data["avg_perc Grads"] = data["avg_perc Grads"].round()
-#app = dash.Dash(__name__)
-#can be hopefully deleted after changing the data
 
 data["latitude"]=data["latitude"].apply(float)
 
@@ -29,9 +26,6 @@ data["longitude"]=data["longitude"].apply(float)
 
 layout = html.Div([
     html.H1("NY City school explorer"),
-    html.Div([html.Span("Map of New York City & the schools"),
-              dcc.Graph(id="map", figure={})]),
-    html.Div([html.Span("See a Scatterplot for the different features & schools"),dcc.Graph(id="scatterPlot", figure={})]),
     dcc.Dropdown(
         id="Borough",
         options=[
@@ -61,7 +55,11 @@ layout = html.Div([
         value="trees",
         disabled= False
 
-    )
+    ),
+    html.Div([
+              dcc.Graph(id="map", figure={},style={"display":"inline-block","width":"50%"}),
+              dcc.Graph(id="scatterPlot", figure={},style={"display":"inline-block", "width":"50%"})])
+
 ])
 #    html.Div([
 #        "Year",
@@ -104,7 +102,7 @@ def get_map(borough_chosen):
 
     fig = px.scatter_mapbox(df, lat="latitude", lon="longitude",
                             hover_name="school_name", hover_data=["avg_perc Grads"],
-                            color_discrete_sequence=["fuchsia"], zoom=zoom, height=600, width=800)
+                            color_discrete_sequence=["fuchsia"], zoom=zoom)
     fig.update_layout(mapbox_style="open-street-map")
     fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
     return fig  # component_property of output
