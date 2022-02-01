@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="581473b7-0589-43dd-b5e2-73592c1a693c" name="Default Changelist" comment="added ml model to the ml site &amp; included the pictures, also connected drop down on first page to map">
-      <change afterPath="$PROJECT_DIR$/assets/FirstPageLayout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/ny.jpg" afterDir="false" />
+    <list default="true" id="581473b7-0589-43dd-b5e2-73592c1a693c" name="Default Changelist" comment="changed the layout of the first page &amp; sliders">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ScatterDropDown.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ScatterDropDown.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/mlPart.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/mlPart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/four.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/four.JPEG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/one.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/one.JPEG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/three.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/three.JPEG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/two.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/two.JPEG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/zero.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/zero.JPEG" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643562556583</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="changed the layout of the first page &amp; sliders">
+      <created>1643650887866</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1643650887866</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,6 +226,7 @@
     <MESSAGE value="connected drop down &amp; sliders for ml part" />
     <MESSAGE value="small changes" />
     <MESSAGE value="added ml model to the ml site &amp; included the pictures, also connected drop down on first page to map" />
-    <option name="LAST_COMMIT_MESSAGE" value="added ml model to the ml site &amp; included the pictures, also connected drop down on first page to map" />
+    <MESSAGE value="changed the layout of the first page &amp; sliders" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the layout of the first page &amp; sliders" />
   </component>
 </project>
