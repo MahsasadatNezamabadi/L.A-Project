@@ -5,13 +5,13 @@ from dash.dependencies import Input, Output
 # Connect to main app.py file
 from app import app
 
-from apps import mlPart, ScatterDropDown
+from apps import mlPart, ScatterDropDown, startPage
 
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
     html.Div([
-        dcc.Link('Scatter|', href='/apps/testScatter'),
-        dcc.Link('ML', href='/apps/mlPart'),
+        dcc.Link('Discover the Data|', href='/apps/testScatter'),
+        dcc.Link('Predict the Graduation Rate', href='/apps/mlPart'),
     ], className="row"),
     html.Div(id='page-content', children=[])
 ])
@@ -24,7 +24,7 @@ def display_page(pathname):
     if pathname == '/apps/mlPart':
         return mlPart.layout
     else:
-        return "404 Page Error! Please choose a link"
+        return startPage.layout
 
 
 if __name__ == '__main__':

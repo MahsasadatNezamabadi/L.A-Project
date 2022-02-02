@@ -1,4 +1,4 @@
-from dash import dcc
+from dash import dcc, no_update
 from dash import html
 from dash.dependencies import Input, Output
 import plotly.express as px
@@ -6,6 +6,7 @@ import pandas as pd
 import pathlib
 from app import app
 from apps.getPrediction import get_pred
+import dash_bootstrap_components as dbc
 
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
@@ -22,17 +23,24 @@ first_school=label_school[0]["value"]
 print(first_school)
 
 layout=html.Div([
-    html.H1("Second Page"),
-    html.Span("Pick a school to see the prediction"),
+    html.H1("NY City school explorer - Predict the Graduation Rate", style={"textAlign":"center"}),
+    html.Span("Here you see the predicted graduation rate of a school you picked. The sliders give you the opportunity "
+              "to manipulate the features of the area around a school. Using this new input a prediction is generated."
+              "By manipulating the features and seeing the effect, we hope you get a better understanding of the impact "
+              "each feature has."
+              ),
+    html.Div([
     dcc.Dropdown(id="school",
                  options=label_school,
                  searchable=True,
                  clearable=False,
                  value=first_school
                  ),
+    ]),
     html.Div([
-    html.Span("Pick the number of Features for the Machine Learning Model"),
-    html.Span("Number of trees"),
+    html.Span("Number of trees", id="tipTrees"),
+    dbc.Tooltip("Set the number of trees that should be assumed in the neighborhood of a school", target="tipTrees",
+                placement="bottom-end"),
     dcc.Slider(
         id="trees",
         min=0,
@@ -45,7 +53,9 @@ layout=html.Div([
             int(data["trees"].max()):{"label":str(data["trees"].max())}},
         tooltip={"placement": "bottom", "always_visible": True}
     ),
-    html.Span("Number of Vehicle crashes"),
+    html.Span("Number of vehicle crashes", id="tipCrashes"),
+    dbc.Tooltip("Set the number of vehicle crashes that should be assumed in the neighborhood of a school", target="tipCrashes",
+                placement="bottom-end"),
     dcc.Slider(
         id="crashes",
         min=0,
@@ -58,7 +68,9 @@ layout=html.Div([
             int(data["crashes"].max()):{"label":str(data["crashes"].max())}},
         tooltip={"placement": "bottom", "always_visible": True}
     ),
-    html.Span("Number of Public computers"),
+    html.Span("Number of public computers", id="tipPc"),
+    dbc.Tooltip("Set the number of public computers that should be assumed in the neighborhood of a school",
+                target="tipPc", placement="bottom-end"),
     dcc.Slider(
         id="pc",
         min=0,
@@ -71,7 +83,9 @@ layout=html.Div([
             int(data["pc"].max()):{"label":str(data["pc"].max())}},
         tooltip={"placement": "bottom", "always_visible": True}
     ),
-    html.Span("Number of Shootings"),
+    html.Span("Number of shootings",id="tipShootings"),
+    dbc.Tooltip("Set the number of shootings that should be assumed in the neighborhood of a school", target="tipShootings",
+                placement="bottom-end"),
     dcc.Slider(
         id="shootings",
         min=0,
@@ -84,7 +98,9 @@ layout=html.Div([
             int(data["shootings"].max()):{"label":str(data["shootings"].max())}},
         tooltip={"placement": "bottom", "always_visible": True}
     ),
-    html.Span("Number of arrests"),
+    html.Span("Number of arrests",id="tipArrests"),
+    dbc.Tooltip("Set the number of arrests that should be assumed in the neighborhood of a school", target="tipArrests",
+                placement="bottom-end"),
     dcc.Slider(
         id="arrests",
         min=0,
@@ -97,7 +113,9 @@ layout=html.Div([
             int(data["arrests"].max()):{"label":str(data["arrests"].max())}},
         tooltip={"placement": "bottom", "always_visible": True}
     ),
-    html.Span("Number of After School Programs"),
+    html.Span("Number of after school programs",id="tipPrograms"),
+    dbc.Tooltip("Set the number of after school programs that should be assumed in the neighborhood of a school", target="tipPrograms",
+                placement="bottom-end"),
     dcc.Slider(
         id="programs",
         min=0,
@@ -110,7 +128,9 @@ layout=html.Div([
             int(data["programs"].max()):{"label":str(data["programs"].max())}},
         tooltip={"placement": "bottom", "always_visible": True}
     ),
-    html.Span("Number of Public Recycling Bins"),
+    html.Span("Number of Public Recycling Bins", id="tipBins"),
+    dbc.Tooltip("Set the number of public recycling bin that should be assumed in the neighborhood of a school",
+                target="tipBins", placement="bottom-end"),
     dcc.Slider(
         id="bins",
         min=0,
@@ -124,10 +144,20 @@ layout=html.Div([
         tooltip={"placement": "bottom", "always_visible": True}
     )]),
     html.Div([
-        html.Img(id="Pred", style={"width":"25%","display":"inline-block"}),
-        html.Div(id='slider-output', style={"display":"inline-block","width":"50%"}),
+        html.Div(
+        [html.Img(id="Pred", style={"width":"20%"}),
+        html.Div([
+        html.P("The top 20% of schools", style={"background":"rgb(174,221,21)"}),
+        html.P("Schools which have a graduation rate between the top 20-40 %",style={"background":"rgb(222,255,184)"}),
+        html.P("Schools which have a graduation rate between the top 40-60 %",style={"background":"rgb(255,251,128)"}),
+        html.P("Schools which have a graduation rate between the top 60-80 %",style={"background":"rgb(255,101,51)"}),
+        html.P("The worst 20% of schools",style={"background":"rgb(239,23,46)"})], style={"display":"flex"})
 
-    ])
+        ]),
+        ],style={ "display":"flex", "flex-direction":"column"}),
+        html.Div(id='slider-output', style={"display":"inline-block", "width":"50%"}),
+
+
 ])
 #@app.callback(Output(component_id="school_value"), Input(component_id="school"))
 @app.callback([Output(component_id="trees",component_property="value"),
@@ -194,4 +224,6 @@ def get_Prediction(trees,crashes,pc,shootings,arrests,programs,bins):
     fname = "/assets/"+filename
 
     return fname
+
+
 
