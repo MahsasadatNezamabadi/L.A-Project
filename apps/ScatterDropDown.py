@@ -42,7 +42,7 @@ layout = html.Div([
             {"label": "Staten Island", "value": "Staten Island"},
             {"label": "All", "value": "all"},
         ],
-        value=["Bronx", "Brookly","Manhattan","Queens","Staten Island"],
+        value=["Bronx", "Brooklyn","Manhattan","Queens","Staten Island"],
         multi = True,
         searchable=True,
         placeholder="Please search"

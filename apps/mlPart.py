@@ -147,15 +147,15 @@ layout=html.Div([
         html.Div(
         [html.Img(id="Pred", style={"width":"20%"}),
         html.Div([
-        html.P("The top 20% of schools", style={"background":"rgb(174,221,21)"}),
-        html.P("Schools which have a graduation rate between the top 20-40 %",style={"background":"rgb(222,255,184)"}),
-        html.P("Schools which have a graduation rate between the top 40-60 %",style={"background":"rgb(255,251,128)"}),
-        html.P("Schools which have a graduation rate between the top 60-80 %",style={"background":"rgb(255,101,51)"}),
-        html.P("The worst 20% of schools",style={"background":"rgb(239,23,46)"})], style={"display":"flex"})
-
+        html.P("Best category", style={"background":"rgb(174,221,21)","width":"20%"}),
+        html.P("Second best category",style={"background":"rgb(222,255,184)","width":"20%"}),
+        html.P("Middle category",style={"background":"rgb(255,251,128)","width":"20%"}),
+        html.P("Second worst category",style={"background":"rgb(255,101,51)","width":"20%"}),
+        html.P("Worst category",style={"background":"rgb(239,23,46)","width":"20%"})
+        ],style={ "display":"flex", "flex-direction":"row"})
         ]),
-        ],style={ "display":"flex", "flex-direction":"column"}),
-        html.Div(id='slider-output', style={"display":"inline-block", "width":"50%"}),
+        ],style={ "display":"flex", "fley-direction":"column"}),
+    html.Div(id='slider-output', style={"display":"inline-block", "width":"50%"}),
 
 
 ])
@@ -192,10 +192,22 @@ def get_sliderOutput(trees,crashes,pc,shootings,arrests,programs,bins):
 
     feat = pd.DataFrame(data=dict_feat)
     pred = get_pred(feat)[0]
-    res_str='Based on your selection of {trees} trees, {crashes} crashes, {pc} pc, {shootings} shootings, ' \
-            '{arrests} arrests,  {programs} programs, {bins} bins the predicted graduation rate is {pred}, ' \
-            'where 0 is the worst rating possible & 4 is the best possible rating'.format(trees=trees,crashes=crashes,pc=pc, shootings=shootings,
-                                                        arrests=arrests,programs=programs,bins=bins, pred=pred)
+    if pred ==0:
+        res="which is the worst category."
+    if pred == 1:
+        res="which is the second worst category."
+    if pred == 2:
+        res = "which is the middle category."
+    if pred == 3:
+        res= "which is the second best category."
+    if pred == 4:
+        res="which is the best category."
+    res_str='We are categorizing the school graduation rate in five different categories. The best possible ' \
+            'category is 4 and the worst is 0. \n' \
+            'Based on your selection of {trees} trees, {crashes} crashes, {pc} pc, {shootings} shootings, ' \
+            '{arrests} arrests,  {programs} programs, {bins} bins the predicted graduation rate is {pred}, {res}' \
+            .format(trees=trees,crashes=crashes,pc=pc, shootings=shootings,
+                                                        arrests=arrests,programs=programs,bins=bins, pred=pred, res=res)
     return res_str
 
 @app.callback(Output(component_id="Pred",component_property="src"),[
