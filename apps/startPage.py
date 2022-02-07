@@ -1,6 +1,7 @@
 from dash import dcc
 from dash import html
 
+#this is the first page & default page one would see, ideally there would be more about the project
 layout=html.Div([
     html.Span("This application will give you an overview about the graduation rate in New York City. It will also help "
               "you understand what influence the close environment has on the graduation rate."
