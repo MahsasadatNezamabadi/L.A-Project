@@ -1,30 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="581473b7-0589-43dd-b5e2-73592c1a693c" name="Default Changelist" comment="small changes">
+    <list default="true" id="581473b7-0589-43dd-b5e2-73592c1a693c" name="Default Changelist" comment="added comments to all but the scatterDropDown &amp; deleted not used files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataPreprocessing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/DataPreprocessing.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout-Style/First Page Layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/archive/Layout-Style/First Page Layout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout-Style/Second Page Layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/archive/Layout-Style/Second Page Layout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout-Style/background.css" beforeDir="false" afterPath="$PROJECT_DIR$/archive/Layout-Style/background.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout-Style/ny.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/archive/Layout-Style/ny.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout-Style/ny2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/archive/Layout-Style/ny2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout-Style/ny3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/archive/Layout-Style/ny3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout-Style/page1.html" beforeDir="false" afterPath="$PROJECT_DIR$/archive/Layout-Style/page1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout-Style/page2.html" beforeDir="false" afterPath="$PROJECT_DIR$/archive/Layout-Style/page2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout-Style/white.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/archive/Layout-Style/white.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getPrediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getPrediction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/mapdropdown.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/mapdropdown.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/mlPart.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/mlPart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/startPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/startPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/four.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/four.JPEG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/one.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/one.JPEG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/three.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/three.JPEG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/two.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/two.JPEG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/zero.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/zero.JPEG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/map.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slider_grade.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/slider_grade.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/ScatterDropDown.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ScatterDropDown.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643873142915</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added comments to all but the scatterDropDown &amp; deleted not used files">
+      <created>1644252759381</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1644252759381</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,6 +251,7 @@
     <MESSAGE value="added ml model to the ml site &amp; included the pictures, also connected drop down on first page to map" />
     <MESSAGE value="changed the layout of the first page &amp; sliders" />
     <MESSAGE value="small changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="small changes" />
+    <MESSAGE value="added comments to all but the scatterDropDown &amp; deleted not used files" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comments to all but the scatterDropDown &amp; deleted not used files" />
   </component>
 </project>

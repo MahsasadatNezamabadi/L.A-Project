@@ -2,11 +2,12 @@ from dash import dcc
 from dash import html
 from dash.dependencies import Input, Output
 
-# Connect to main app.py file
+# Connect to main app.py file, used to create an application with more than one page
 from app import app
-
+#import the different pages
 from apps import mlPart, ScatterDropDown, startPage
 
+#create the linkage of the pages
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
     html.Div([
@@ -16,6 +17,7 @@ app.layout = html.Div([
     html.Div(id='page-content', children=[])
 ])
 
+#when to switch to what page
 @app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
 def display_page(pathname):
@@ -28,4 +30,4 @@ def display_page(pathname):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False)
