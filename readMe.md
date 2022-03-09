@@ -21,6 +21,8 @@ This is the structure as seen in the main branch. To deploy the application, thi
   * mlPart.py: contains the page Predict the Graduation Rate with the sliders and the graduation cap
   * startPage.py: contains the page shown when the application is loaded
   * getPrediction.py: is the method used to generate a prediction using final_model.sav 
+
+
 ### Structure Pre-processing
 Here the datasets and the KNN model is generated. The code for this can be found in the branch basicData
 * DataPreprocessing.ipynb: Here the data is fetched from the NYC open data API and all the features are calculated as well as standardized.
@@ -28,8 +30,21 @@ Here the datasets and the KNN model is generated. The code for this can be found
 * classification.ipynb: Here the KNN model is trained. The reached accuracy is still not good, but better than in the regression model (accuracy: 0.4)
 * datasets: Here are the generated datasets saved as well as the ones downloaded from the NYC open data api
 
-
 ## Machine Learning Pipeline
+### Data Preprocessing
+Get all features from the NYC open data API
+* Schools & Graduation Rate, trees, vehicle crashes, public computers, shootings, arrests, after-school programs, public recycling bins
+Calculate the number of features in the neighboorhood (500m radius) of each school 
+* For example: the number of trees in a 500m radius around East Side Community School, repeat for each feature & school
+Get average graduation rate for each school
+* Because we do not have data from each year for each feature, we use the average graduation rate of a school
+Normalize data for Machine Learning
+* As all the features are highly diverse in numbers, we normalize all the features using the mean and the standard deviation
+
+### Machine Learning
+We use the KNN-Algorthim to classify the graduation rate of each school in 5 steps: very bad, bad, neutral, good, very good. These labels are designed by us and contain the same number of schools. What label a school get, depends on the average graduation rate. For example the top 20% get the label very good.
+The trained model is then used to predict the graduation rate of the schools in our dataset and also to predict the graduation rate based on the input from the sliders.
+
 ## Visualization
 The first visualizations are used to give the user an overview of the data. Hence we use a map and a scatterplot.
 ![Map and Scatterplot from the data of the NYCSchools](https://github.com/MahsasadatNezamabadi/L.A-Project/blob/main/ImagesForReadMe/GraduationRate.png?raw=true)
