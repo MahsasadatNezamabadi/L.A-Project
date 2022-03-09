@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="581473b7-0589-43dd-b5e2-73592c1a693c" name="Default Changelist" comment="added comments to all but the scatterDropDown &amp; deleted not used files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/ScatterDropDown.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ScatterDropDown.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="basicData" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="23eevETESaf3wsFeqVZCYQzKgey" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/archive" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/archive" />
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.index">
+    <configuration name="getPrediction" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apps" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/getPrediction.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="index" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/index.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.getPrediction" />
+      <item itemvalue="Python.index" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="581473b7-0589-43dd-b5e2-73592c1a693c" name="Default Changelist" comment="" />
+      <created>1642099209072</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642099209072</updated>
+    </task>
+    <task id="LOCAL-00001" summary="added empty readme">
+      <created>1642099549846</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642099549846</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first version for getting the needed data, still in a jupyter nodebook &amp; need some work for efficiency.&#10;Also it is just a small subset of data">
+      <created>1642099830849</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642099830850</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added directory data &amp; uploaded our first version of the csv file">
+      <created>1642100058480</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642100058480</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added directory data &amp; uploaded our first version of the csv file, optimized performance a little">
+      <created>1642434060132</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1642434060133</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added directory data &amp; uploaded our first version of the csv file, optimized performance a little">
+      <created>1642434081649</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642434081650</updated>
+    </task>
+    <task id="LOCAL-00006" summary="connected Scatterplot &amp; Dropdown">
+      <created>1642448612039</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1642448612039</updated>
+    </task>
+    <task id="LOCAL-00007" summary="basic architecture for application done, including map &amp; scatterplot">
+      <created>1642524161458</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1642524161458</updated>
+    </task>
+    <task id="LOCAL-00008" summary="updated data, implemented slider &amp; Dropdown on second pade">
+      <created>1642597356138</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1642597356139</updated>
+    </task>
+    <task id="LOCAL-00009" summary="aggregate graduation rate for each school">
+      <created>1642766865120</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1642766865123</updated>
+    </task>
+    <task id="LOCAL-00010" summary="connected drop down &amp; sliders for ml part">
+      <created>1642783353619</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1642783353619</updated>
+    </task>
+    <task id="LOCAL-00011" summary="small changes">
+      <created>1643279962115</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1643279962116</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added ml model to the ml site &amp; included the pictures, also connected drop down on first page to map">
+      <created>1643562556583</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1643562556583</updated>
+    </task>
+    <task id="LOCAL-00013" summary="changed the layout of the first page &amp; sliders">
+      <created>1643650887866</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1643650887866</updated>
+    </task>
+    <task id="LOCAL-00014" summary="changed the layout of the first page &amp; sliders">
+      <created>1643725760440</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1643725760444</updated>
+    </task>
+    <task id="LOCAL-00015" summary="small changes">
+      <created>1643873142915</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1643873142915</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added comments to all but the scatterDropDown &amp; deleted not used files">
+      <created>1644252759381</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1644252759381</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added empty readme" />
+    <MESSAGE value="first version for getting the needed data, still in a jupyter nodebook &amp; need some work for efficiency.&#10;Also it is just a small subset of data" />
+    <MESSAGE value="added directory data &amp; uploaded our first version of the csv file" />
+    <MESSAGE value="added directory data &amp; uploaded our first version of the csv file, optimized performance a little" />
+    <MESSAGE value="connected Scatterplot &amp; Dropdown" />
+    <MESSAGE value="basic architecture for application done, including map &amp; scatterplot" />
+    <MESSAGE value="updated data, implemented slider &amp; Dropdown on second pade" />
+    <MESSAGE value="aggregate graduation rate for each school" />
+    <MESSAGE value="connected drop down &amp; sliders for ml part" />
+    <MESSAGE value="added ml model to the ml site &amp; included the pictures, also connected drop down on first page to map" />
+    <MESSAGE value="changed the layout of the first page &amp; sliders" />
+    <MESSAGE value="small changes" />
+    <MESSAGE value="added comments to all but the scatterDropDown &amp; deleted not used files" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comments to all but the scatterDropDown &amp; deleted not used files" />
+  </component>
+</project>
