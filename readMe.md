@@ -51,6 +51,7 @@ The application should be accessible at http://127.0.0.1:8050/
 ## Ideas for further improvement
 #### Data 
 Right now we are aggregating the data of each school for each feature, this should be improved, so that we can have each feature for each year. This should also allow a better prediction.
+Another improvement would be to automate the data preprocessing, so that if new data is added by New York City, it would be updated automatically.
 ### Application
 It would be nice to have some kind of connection between the different visualizations. For example a school clicked in the map, could also be highlighted in the scatter plot. 
 Furthermore the possibility to pick two or more schools on the second page to compare them would be helpfull.
