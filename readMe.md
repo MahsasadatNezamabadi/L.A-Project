@@ -1,5 +1,6 @@
 # NY City School Explorer
-How does the environment influence the graduation rate of New York City High Schools? We are going to discuss this issue and come to a conclusion using Machine Learning methods and making predictions. We give the users the possibility to search between different features in the environment, see the results, gets predictions and finally choose the best high school with the highest graduation rate in the New York City.
+How does the environment influence the graduation rate of New York City High Schools? We are going to discuss this issue and come to a conclusion using Machine Learning methods and making predictions. We give the users the possibility to search between different features in the environment, see the results, gets predictions and finally choose the best high school with the highest graduation rate in the New York City. We can also find out which schools are at risk and where do they have problems.
+
 ## Dataset Description
 
 Data Source:
@@ -16,8 +17,38 @@ Data description
   * Arrests
   * After-School programs
   * Public Recycling Bins
+ 
+For each features we need some kind of location (Latitude & longitude)and use location to calculate number of features in the neighborhood of each school.
+
 
 ## Implementation Technologies
+
+### Data preprocessing:
+* Pandas 
+  * create new attributes, aggregate some things & connect different datasets
+* Location/ finding neighbours
+  *  Haversine formula
+
+### Machine Learning:
+* Classification
+  * scikit: Try Bayesian Classifier & KNN
+* Feature Analysis
+  * Would be nice, if we have time
+
+### Visualization & Web Application:
+* Plotly & Dash
+  * Dash for the deployment of the website 
+  * Plotly for the visualization
+  * Both together to make it interactive
+* Matplotlib
+  * For simpler visualizations
+
+
+
+
+
+
+
 ## App Structure
 The application is split in two parts: the preprocessing and the application.
 ### Structure of the application
