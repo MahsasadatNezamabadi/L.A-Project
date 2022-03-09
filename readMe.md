@@ -1,5 +1,5 @@
 # NY City School Explorer
-How does the environment influence the graduation rate of New York City High Schools? We are going to discuss this issue and come to a conclusion using Machine Learning methods and making predictions. We give the users the possibility to search to search between different features in the environment, see the results, gets predictions and finally choose the best high school in the New York City.
+How does the environment influence the graduation rate of New York City High Schools? We are going to discuss this issue and come to a conclusion using Machine Learning methods and making predictions. We give the users the possibility to search between different features in the environment, see the results, gets predictions and finally choose the best high school with the highest graduation rate in the New York City.
 ## Dataset Description
 ## Implementation Technologies
 ## App Structure
