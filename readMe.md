@@ -1,5 +1,5 @@
 # NY City School Explorer
-here short description of the project
+How does the environment influence the graduation rate of New York City High Schools? We are going to discuss this issue and come to a conclusion using Machine Learning methods and making predictions.
 
 ## Dataset Description
 ## Implementation Technologies
