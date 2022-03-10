@@ -1,10 +1,10 @@
 # NY City School Explorer
-How does the environment influence the graduation rate of New York City High Schools? We are going to discuss this issue and come to a conclusion using Machine Learning methods and making predictions. We give the users the possibility to search between different features in the environment, see the results, gets predictions and finally choose the best high school with the highest graduation rate in the New York City. We can also find out which schools are at risk and where do they have problems.
+How does the environment influence the graduation rate of New York City High Schools? We are going to enable users to discover the connection between diffferent environmental aspects and the graduation rate of a school. We give the users the possibility to search between different features in the environment, see the results, get predictions of the graduation rate depending on these features and finally choose the high school, which we predict to have a good graduation rate in the New York City. We can also find out which schools are at risk and help discover connections between the environment and the graduation rate.
 
 ## Dataset Description
 
 Data Source:
-* all data from the NYC OpenData website
+* all data from the NYC OpenData website (https://opendata.cityofnewyork.us/data/)
 
 Data description
 * Label: 
@@ -25,28 +25,19 @@ For each features we need some kind of location (Latitude & longitude)and use lo
 
 ### Data preprocessing:
 * Pandas 
-  * create new attributes, aggregate some things & connect different datasets
+  * create new attributes, aggregate & connect different datasets
 * Location/ finding neighbours
   *  Haversine formula
 
 ### Machine Learning:
 * Classification
-  * scikit: Try Bayesian Classifier & KNN
-* Feature Analysis
-  * Would be nice, if we have time
+  * scikit: Regression & KNN
 
 ### Visualization & Web Application:
 * Plotly & Dash
   * Dash for the deployment of the website 
   * Plotly for the visualization
   * Both together to make it interactive
-* Matplotlib
-  * For simpler visualizations
-
-
-
-
-
 
 
 ## App Structure
@@ -109,6 +100,9 @@ pip install scikit-learn == 1.0.2
 Then either clone the repository or download the main-branch. In the folder with the code execute ```python index.py.```
 The application should be accessible at http://127.0.0.1:8050/
 
+## Demonstration
+A short demonstration of the project can be found at: https://youtu.be/j1uODC1_F1g
+
 ## Ideas for further improvement
 #### Data 
 Right now we are aggregating the data of each school for each feature, this should be improved, so that we can have each feature for each year. This should also allow a better prediction.
@@ -116,3 +110,8 @@ Another improvement would be to automate the data preprocessing, so that if new 
 ### Application
 It would be nice to have some kind of connection between the different visualizations. For example a school clicked in the map, could also be highlighted in the scatter plot. 
 Furthermore the possibility to pick two or more schools on the second page to compare them would be helpfull.
+
+## Contributors
+Mahsasadat Nezamabadi
+Laura Sielenkemper
+Clara Siepmann [GitHub](https://github.com/clara-hue)
