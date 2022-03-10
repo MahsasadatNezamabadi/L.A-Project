@@ -113,5 +113,7 @@ Furthermore the possibility to pick two or more schools on the second page to co
 
 ## Contributors
 Mahsasadat Nezamabadi
+
 Laura Sielenkemper
+
 Clara Siepmann [GitHub](https://github.com/clara-hue)
